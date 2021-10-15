@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { NgxGalleryAnimation, NgxGalleryImage, NgxGalleryOptions } from '@kolkov/ngx-gallery';
+import { NgxGalleryAnimation, NgxGalleryImage, NgxGalleryImageSize, NgxGalleryOptions } from '@kolkov/ngx-gallery';
 import { Member } from 'src/app/_models/member';
 import { MembersService } from '../../_services/members.service';
 
@@ -22,10 +22,8 @@ export class MemberDetailComponent implements OnInit {
 
     this.galleryOptions = [
       {
-        width: '500px',
-        height: '500px', 
-        imagePercent: 100,
-        thumbnailsColumns: 4,
+        imageSize: NgxGalleryImageSize.Contain,
+        thumbnailsColumns: 5,
         imageAnimation: NgxGalleryAnimation.Slide,
         preview: false
       }
