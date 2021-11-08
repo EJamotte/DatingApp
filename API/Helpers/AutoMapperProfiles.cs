@@ -1,3 +1,4 @@
+using System.Security.Cryptography.X509Certificates;
 using System.Linq;
 using API.DTOs;
 using API.Entities;
@@ -17,6 +18,7 @@ namespace API.Helpers
                 src.DateOfBirth.CalculateAge()));
             CreateMap<Photo, PhotoDto>();
             CreateMap<MemberUpdateDto, AppUser>();
+            CreateMap<RegisterDto, AppUser>();
         }
     }
 }
